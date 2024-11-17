@@ -10,14 +10,11 @@ use Spatie\Permission\Models\Role;
 
 class UserTableSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         User::create([
             'name' => 'Administrator',
-            'email' => 'admin@gmial.com',
+            'email' => 'admin@gmail.com',
             'password' => bcrypt('bismillah'),
         ]);
 
