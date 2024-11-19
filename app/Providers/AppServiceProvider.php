@@ -25,7 +25,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('viewApiDocs', function (User $user) {
-            return $user->isAdmin();
+            // return $user->isAdmin();
+            return $user !== null; // Semua pengguna login diizinkan
         });
 
         Scramble::afterOpenApiGenerated(function (OpenApi $openApi) {
