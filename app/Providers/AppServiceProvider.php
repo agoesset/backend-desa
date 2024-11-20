@@ -24,10 +24,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Gate::define('viewApiDocs', function ($user = null) {
-            // Ubah sesuai logika akses Anda
-            return true;
-        });
+        // Gate::define('viewApiDocs', function ($user = null) {
+        //     // Ubah sesuai logika akses Anda
+        //     return true;
+        // });
 
         Scramble::afterOpenApiGenerated(function (OpenApi $openApi) {
             $openApi->secure(
